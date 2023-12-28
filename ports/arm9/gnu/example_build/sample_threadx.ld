@@ -1,3 +1,6 @@
+MEMORY { .sram : ORIGIN = 0x00000000, LENGTH = 0x000A000 }
+MEMORY { .sdram : ORIGIN = 0x80000000, LENGTH = 0x00400000 }
+
 OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
@@ -8,7 +11,7 @@ SECTIONS
 {
   . = 0x00000000;
     
-  .vectors      : {reset.o(.text) }
+  .vectors      : {build/reset.o(.text) }
 
   /* Read-only sections, merged into text segment: */
   . = 0x00001000;

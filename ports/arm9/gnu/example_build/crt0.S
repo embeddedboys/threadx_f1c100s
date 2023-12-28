@@ -51,7 +51,7 @@ _mainCRTStartup:
 #endif  
         bl      main
 
-        bl      exit         /* Should not return.  */
+        @ bl      exit         /* Should not return.  */
 
     
     /* For Thumb, constants must be after the code since only 

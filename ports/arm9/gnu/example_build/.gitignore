@@ -1,0 +1,7 @@
+*.elf
+*.bin
+*.dis
+*.img
+!Makefile
+!libc.a
+!libgcc.a
